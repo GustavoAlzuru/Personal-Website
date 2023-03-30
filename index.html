@@ -19,8 +19,9 @@
             <div class="nav-links">
                 <a href="#">HOME</a>
                 <a href="#projects">PROJECTS</a>
-                <a href="#">ABOUT ME</a>
-                <a href="#">CONTACT</a>
+                <a href="#about-me">ABOUT ME</a>
+                <a href="#contact-me">CONTACT</a>
+                <button onclick="darkMode()" id="buttonDarkMode">☽</button>
             </div>
         </div>
     </nav>
@@ -29,13 +30,21 @@
         <div class="sec-center">
             <div class="sec-flex">
                 <h2>Gustavo Alzuru</h2>
-                <p>Frontend developer, Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, laudantium.</p>
+                <nav class="svg-info">
+                    <a href="https://github.com/GustavoAlzuru" target="_blank">
+                        <img src="./svgs/github.svg" alt="github logo">
+                    </a>
+                    <a href="https://www.linkedin.com/in/gustavo-alzuru-ga25" target="_blank">
+                        <img src="./svgs/linkedin.svg" alt="linkedin logo">
+                    </a>
+                </nav>
+                <p><b>Frontend Developer</b>, Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, laudantium.</p>
             </div>
         </div>
     </section>
     <section class="sec-projects">
         <div class="projects-container" id="projects">
-            <h3>Projects <span>(hover the images to have more information)</span></h3>
+            <h3 class="projects-title">Projects <span>(hover the images to have more information)</span></h3>
             <ul class="cards-responsive">
                 <li class="cards">
                     <header>
@@ -46,7 +55,7 @@
                             alt="">
                     </div>
                     <footer>
-                        <button>Code</button>
+                        <button class="button">Code</button>
                     </footer>
                 </li>
                 <li class="cards">
@@ -58,7 +67,7 @@
                             alt="">
                     </div>
                     <footer>
-                        <button>Code</button>
+                        <button class="button">Code</button>
                     </footer>
                 </li>
                 <li class="cards">
@@ -70,7 +79,7 @@
                             alt="">
                     </div>
                     <footer>
-                        <button>Code</button>
+                        <button class="button">Code</button>
                     </footer>
                 </li>
                 <li class="cards">
@@ -82,7 +91,7 @@
                             alt="">
                     </div>
                     <footer>
-                        <button>Code</button>
+                        <button class="button">Code</button>
                     </footer>
                 </li>
                 <li class="cards">
@@ -94,7 +103,7 @@
                             alt="">
                     </div>
                     <footer>
-                        <button>Code</button>
+                        <button class="button">Code</button>
                     </footer>
                 </li>
                 <li class="cards">
@@ -106,14 +115,43 @@
                             alt="">
                     </div>
                     <footer>
-                        <button>Code</button>
+                        <button class="button">Code</button>
                     </footer>
                 </li>
             </ul>
-            <button onclick="darkMode()" style="margin-top: 30px;">Change theme</button>
+           
         </div>
     </section>
-
+    <section class="sec-about-me">
+        <div class="about-me-container" id="about-me">
+            <h3>About me</h3>
+            <div class="about-me-info">
+                <picture class="about-me-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxljYvbQCjYRt_ddLRh__vT4dIkdntGo8DhUdLA8PQWg&usqp=CAU&ec=48665698" alt="">
+                </picture>
+                <article class="about-me-article">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui accusamus quo magni voluptatibus beatae eos libero. Eius nisi corrupti nostrum commodi facere harum placeat blanditiis praesentium, corporis libero alias recusandae deleniti. Nisi cupiditate blanditiis inventore exercitationem sed atque dolorem minima.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="contact-container" id="contact-me">
+            <h3>Contact me</h3>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+          
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
     <script src="./index.js"></script>
 </body>
 

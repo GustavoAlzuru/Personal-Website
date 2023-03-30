@@ -6,33 +6,9 @@
     --primary-color: rgb(0, 0, 0);
     --border: black;
     --background: rgba(255, 233, 233, 0.925);
-    --background-nav: rgba(255, 209, 209, 0.342);
 }
 html{
     scroll-behavior: smooth;
-}
-.dark-mode { 
-    --title-color: rgb(255, 152, 16);
-    --primary-color: white;
-    --text-shadow: 0 0 5px cyan;
-    --text-shadow-title: 
-        0 0 10px rgb(0, 255, 255),
-        0 0 10px rgb(0, 255, 255),
-        0 0 30px rgb(0, 255, 255),
-        0 0 30px rgba(0, 255, 255, 0.459);
-    --box-shadow-button: 
-        0 2px 3px 0 cyan inset, 
-        0 2px 7px 0 cyan,
-        0 2px 10px 0 cyan inset,
-        0 2px 16px 0 cyan;
-    --background: rgba(0, 0, 0, 0.959);
-    --border: cyan;
-    --subtitle-shadow: 
-    0 0 5px rgb(255, 152, 16),
-    0 0 20px rgb(255, 152, 16);
-    --background-nav: rgba(133, 38, 0, 0.199);
-    --background-bottom: linear-gradient(to bottom, #000000, #0d080e, #0f111a, #071a22, #002123);
-    --background-top: linear-gradient(to top, #000000, #0d080e, #0f111a, #071a22, #002123);
 }
 
 * {
@@ -40,8 +16,29 @@ html{
     padding: 0;
     box-sizing: border-box;
 }
+.dark-mode { 
+    --title-color: rgb(255, 152, 16);
+    --primary-color: white;
+    --color-cyan: cyan;
+    --text-shadow: 0 0 5px cyan;
+    --text-shadow-title: 
+        0 0 10px rgb(0, 255, 255),
+        0 0 10px rgb(0, 255, 255),
+        0 0 30px rgba(0, 255, 255, 0.699);
+    --box-shadow-button: 
+        0 2px 3px 0 cyan inset, 
+        0 2px 7px 0 cyan,
+        0 2px 10px 0 cyan inset,
+        0 2px 16px 0 cyan;
+    --background: linear-gradient(to bottom, #000000, #0b060a, #0f0d15, #0e141d, #071a22, #071a22, #071a22, #071a22, #0e141d, #0f0d15, #0b060a, #000000);
+    --border: cyan;
+    --subtitle-shadow: 
+    0 0 5px rgb(255, 152, 16),
+    0 0 20px rgba(255, 151, 16, 0.712);
+}
 
 body {
+    background-image: var(--background);
     background-color: var(--background);
     color: var(--primary-color);
     font-family: 'Dosis', sans-serif;
@@ -73,7 +70,11 @@ a{
     color: var(--primary-color);
     font-size: 1.2rem;
 }
-button {
+button{
+    background: transparent;
+    cursor: pointer;
+}
+.button {
     font-family: 'Dosis', sans-serif;
     color: var(--primary-color);
     border: 2px solid var(--border);
@@ -82,7 +83,7 @@ button {
     letter-spacing: 0.9px;
     padding: 10px 20px;
     font-size: 20px;
-    transition: box-shadow 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
     cursor: pointer;
 }
 span{
@@ -91,7 +92,7 @@ span{
 ul{
     list-style: none;
 }
-button:hover {
+.button:hover {
     box-shadow: var(--box-shadow-button);
     text-shadow: var(--text-shadow);
 }
@@ -101,6 +102,9 @@ button:hover {
     }
     h3{
         font-size: 2.5rem;
+    }
+    .nav-links a{
+        display: none;
     }
 }
 
@@ -131,9 +135,19 @@ button:hover {
     display: flex;
     gap: 25px;
 }
+.nav-links a:hover{
+    color: var(--color-cyan);
+}
+.nav-links button{
+    border: none;
+    font-size: 20px;
+    width: 20px;
+    color: var(--primary-color);
+}
+/* NAME TITLE */
+
 .sec{
     height: calc(100vh - 55px);
-    background-image: var(--background-bottom);
 }
 .sec-center{
     height: 100%;
@@ -144,14 +158,26 @@ button:hover {
 .sec-flex{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    width: 90%;
 }
-
+.svg-info{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+.svg-info img{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
 /* section projects */
 
-.sec-projects{
-    height: 2000px;
-    background-image: var(--background-top);
+.projects-title span{
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+.projects-title{
+    margin-bottom: 60px;
 }
 .projects-container{
     width: 65%;
@@ -179,6 +205,7 @@ button:hover {
 }
 
 /* USE OF IMAGE TO SEE HOW IT LOOKS */
+
 .card-img{
     width: 100%;
     height: 200px;
@@ -192,7 +219,6 @@ button:hover {
     font-size: 1.3rem;
     align-items: center;
     position: absolute;
-    border-radius: 60px;
     text-align: center;
     top: 0;
     left: 0;
@@ -203,7 +229,7 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.911);
     padding: 10px;
     box-sizing: border-box;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 .card-img:hover::before{
     opacity: 1;
@@ -215,9 +241,69 @@ button:hover {
     object-fit: contain;
     object-position: left;
 }
-/* TODO change with classes  */
-h3 span{
-    font-size: 1.1rem;
-    color: var(--primary-color);
+
+/* ABOUT ME SECTION */
+
+.about-me-container{
+    width: 70%;
+    margin: 120px auto;
+    padding-top: 50px;
 }
-/* ---------------- */
+.about-me-info{
+    width: 80%;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 25px;
+}
+.about-me-img{
+    width: 100%;
+    height: 400px;
+}
+.about-me-img img{
+    width: 100%;
+    height: 400px;
+}
+/* CONTACT FORM */
+.contact{
+    width: 80%;
+    margin: 0 auto;
+    height: 1200px;
+}
+.contact-container{
+    margin-top: 200px;
+}
+.contact-container h3{
+    margin-bottom: 40px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  input[type="submit"] {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    color: var(--primary-color);
+    background: transparent;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  input[type="submit"]:hover {
+    background-color: rgba(0, 255, 255, 0.404);
+  }
