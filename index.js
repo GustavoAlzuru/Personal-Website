@@ -6,7 +6,6 @@ const hiddenRight = document.querySelector('.hidden-right')
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry => {
-        console.log(entry)
         if(entry.isIntersecting){
             entry.target.classList.add('show')
         }else{
@@ -17,7 +16,6 @@ const observer = new IntersectionObserver((entries) => {
 
 const observerLeft = new IntersectionObserver((entries) => {
     entries.forEach((entry => {
-        console.log(entry)
         if(entry.isIntersecting){
             entry.target.classList.add('show-img')
         }else{
@@ -34,21 +32,32 @@ observerLeft.observe(hiddenRight)
 // DARK THEME
 
 const currentTheme = localStorage.getItem('theme')
-const buttonDarkMode = document.getElementById('buttonDarkMode')
+const buttonDarkMode = document.querySelector('.buttonDarkMode')
 if(currentTheme){
     document.body.classList.add(currentTheme)
-    buttonDarkMode.textContent = '☀'
+    buttonDarkMode.innerHTML = '<i class="fa-regular fa-sun"></i>'
 }
 
 function darkMode(){
     document.body.classList.toggle('dark-mode')
     if(document.body.classList.contains('dark-mode')){
         localStorage.setItem('theme', 'dark-mode')
-        buttonDarkMode.textContent = '☀'
+        buttonDarkMode.innerHTML= '<i class="fa-regular fa-sun"></i>'
     }else{
         localStorage.removeItem('theme', 'dark-mode')
-        buttonDarkMode.textContent = '☽'
+        buttonDarkMode.innerHTML = '<i class="fa-regular fa-moon"></i>'
     }
 }
 
-// const hiddenImg = document.querySelector('.about-me-img')
+// NAVIGATION MOBILE
+
+const navLinks = document.querySelector('.nav-links')
+const openLinks = document.querySelector('.mobile-nav')
+const closeLinks = document.querySelector('.close-nav')
+
+openLinks.addEventListener('click', () => {
+   navLinks.classList.add('visible')
+})
+closeLinks.addEventListener('click', () => {
+    navLinks.classList.remove('visible')
+})

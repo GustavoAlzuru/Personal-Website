@@ -7,26 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gustavo Alzuru</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <!-- NAVIGATION -->
-
     <nav class="nav">
         <div class="center nav-flex">
             <div>
                 <span>GA</span>
             </div>
+            <button class="mobile-nav"><i class="fa-solid fa-bars"></i></button>
             <div class="nav-links">
+                <button class="close-nav"><i class="fa-solid fa-xmark"></i></button>
                 <a href="#">HOME</a>
                 <a href="#projects">PROJECTS</a>
                 <a href="#about-me">ABOUT ME</a>
                 <a href="#contact-me">CONTACT</a>
-                <button onclick="darkMode()" id="buttonDarkMode">☽</button>
+                <button onclick="darkMode()" class="buttonDarkMode"><i class="fa-regular fa-moon"></i></button>
             </div>
         </div>
     </nav>
-    
+
     <!-- END OF NAVIGATION -->
 
     <section class="sec">
@@ -41,7 +43,8 @@
                         <img src="./svgs/linkedin.svg" alt="linkedin logo">
                     </a>
                 </nav>
-                <p><b>Frontend Developer</b>, Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, laudantium.</p>
+                <p><b>Frontend Developer</b>, Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
+                    laudantium.</p>
             </div>
         </div>
     </section>
@@ -57,9 +60,6 @@
                         <img src="https://www.gamesver.com/wp-content/uploads/2022/02/Hand-drawn-tic-tac-toe-game.png.webp"
                             alt="">
                     </div>
-                    <footer>
-                        <button class="button">Code</button>
-                    </footer>
                 </li>
                 <li class="cards hidden">
                     <header>
@@ -69,9 +69,6 @@
                         <img src="https://www.gamesver.com/wp-content/uploads/2022/02/Hand-drawn-tic-tac-toe-game.png.webp"
                             alt="">
                     </div>
-                    <footer>
-                        <button class="button">Code</button>
-                    </footer>
                 </li>
                 <li class="cards hidden">
                     <header>
@@ -81,33 +78,16 @@
                         <img src="https://www.gamesver.com/wp-content/uploads/2022/02/Hand-drawn-tic-tac-toe-game.png.webp"
                             alt="">
                     </div>
-                    <footer>
-                        <button class="button">Code</button>
-                    </footer>
                 </li>
                 <li class="cards hidden">
                     <header>
                         <h4>TicTacToe</h4>
                     </header>
-                    <div class="card-img" data-text="Tic tac toe game using Reactjs Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, numquam!">
+                    <div class="card-img"
+                        data-text="Tic tac toe game using Reactjs Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, numquam!">
                         <img src="https://www.gamesver.com/wp-content/uploads/2022/02/Hand-drawn-tic-tac-toe-game.png.webp"
                             alt="">
                     </div>
-                    <footer>
-                        <button class="button">Code</button>
-                    </footer>
-                </li>
-                <li class="cards hidden">
-                    <header>
-                        <h4>TicTacToe</h4>
-                    </header>
-                    <div class="card-img" data-text="Tic tac toe game using Reactjs">
-                        <img src="https://www.gamesver.com/wp-content/uploads/2022/02/Hand-drawn-tic-tac-toe-game.png.webp"
-                            alt="">
-                    </div>
-                    <footer>
-                        <button class="button">Code</button>
-                    </footer>
                 </li>
                 <li class="cards hidden">
                     <header>
@@ -117,9 +97,15 @@
                         <img src="https://www.gamesver.com/wp-content/uploads/2022/02/Hand-drawn-tic-tac-toe-game.png.webp"
                             alt="">
                     </div>
-                    <footer>
-                        <button class="button">Code</button>
-                    </footer>
+                </li>
+                <li class="cards hidden">
+                    <header>
+                        <h4>TicTacToe</h4>
+                    </header>
+                    <div class="card-img" data-text="Tic tac toe game using Reactjs">
+                        <img src="https://www.gamesver.com/wp-content/uploads/2022/02/Hand-drawn-tic-tac-toe-game.png.webp"
+                            alt="">
+                    </div>
                 </li>
             </ul>
 
@@ -130,10 +116,14 @@
             <h3 class="hidden">About me</h3>
             <div class="about-me-info">
                 <picture class="about-me-img hidden-left">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxljYvbQCjYRt_ddLRh__vT4dIkdntGo8DhUdLA8PQWg&usqp=CAU&ec=48665698" alt="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxljYvbQCjYRt_ddLRh__vT4dIkdntGo8DhUdLA8PQWg&usqp=CAU&ec=48665698"
+                        alt="">
                 </picture>
                 <article class="about-me-article hidden-right">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui accusamus quo magni voluptatibus beatae eos libero. Eius nisi corrupti nostrum commodi facere harum placeat blanditiis praesentium, corporis libero alias recusandae deleniti. Nisi cupiditate blanditiis inventore exercitationem sed atque dolorem minima.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui accusamus quo magni voluptatibus
+                        beatae eos libero. Eius nisi corrupti nostrum commodi facere harum placeat blanditiis
+                        praesentium, corporis libero alias recusandae deleniti. Nisi cupiditate blanditiis inventore
+                        exercitationem sed atque dolorem minima.</p>
                 </article>
             </div>
         </div>
@@ -144,13 +134,13 @@
             <form>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
-          
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
-          
+
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-          
+
                 <input type="submit" value="Submit">
             </form>
         </div>
