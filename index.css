@@ -222,9 +222,10 @@ ul {
     display: grid;
     width: 85%;
     margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 400px));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 40px;
     margin-top: 20px;
+    overflow: hidden;
 }
 
 .cards {
