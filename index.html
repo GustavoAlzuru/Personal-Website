@@ -34,17 +34,18 @@
     <section class="sec">
         <div class="sec-center">
             <div class="sec-flex hidden">
-                <h2>Gustavo Alzuru</h2>
-                <nav class="svg-info">
-                    <a href="https://github.com/GustavoAlzuru" target="_blank">
-                        <img src="./svgs/github.svg" alt="github logo">
-                    </a>
-                    <a href="https://www.linkedin.com/in/gustavo-alzuru-ga25" target="_blank">
-                        <img src="./svgs/linkedin.svg" alt="linkedin logo">
-                    </a>
-                </nav>
-                <p><b>Frontend Developer</b>, Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-                    laudantium.</p>
+                <div>
+                    <h2>Gustavo Alzuru</h2>
+                    <nav class="svg-info">
+                        <a href="https://github.com/GustavoAlzuru" target="_blank">
+                            <img src="./svgs/github.svg" alt="github logo">
+                        </a>
+                        <a href="https://www.linkedin.com/in/gustavo-alzuru-ga25" target="_blank">
+                            <img src="./svgs/linkedin.svg" alt="linkedin logo">
+                        </a>
+                    </nav>
+                </div>
+                <p><b>Full-stack</b>, self-taught web developer with a passion for websites and functional apps. Currently, enrolled in a full-stack bootcamp to further enhance my skills and knowledge in the field of web development.</p>
             </div>
         </div>
     </section>
@@ -120,10 +121,9 @@
                         alt="">
                 </picture>
                 <article class="about-me-article hidden-right">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui accusamus quo magni voluptatibus
-                        beatae eos libero. Eius nisi corrupti nostrum commodi facere harum placeat blanditiis
-                        praesentium, corporis libero alias recusandae deleniti. Nisi cupiditate blanditiis inventore
-                        exercitationem sed atque dolorem minima.</p>
+                    <p>I'm Gustavo Alzuru, self-taught web developer, enrolled in a full-stack bootcamp.</p>
+
+                    <p>Throughout my journey as a web developer, I have worked on various projects that have given me valuable experience and expertise in front-end and back-end development. I specialize in using HTML, CSS, JavaScript, React, and Node.js to develop responsive and interactive websites that engage and delight users.</p>
                 </article>
             </div>
         </div>
@@ -131,7 +131,7 @@
     <section class="contact">
         <div class="contact-container hidden" id="contact-me">
             <h3>Contact me</h3>
-            <form>
+            <form id="contact-information" onsubmit="handleSubmit(event)">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
@@ -141,7 +141,7 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
 
-                <input type="submit" value="Submit">
+                <button type="submit" class="form-submit">Submit</button>
             </form>
         </div>
     </section>

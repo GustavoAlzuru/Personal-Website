@@ -25,18 +25,14 @@ html {
     --text-shadow: 0 0 5px cyan;
     --text-shadow-title:
         0 0 10px rgb(0, 255, 255),
-        0 0 10px rgb(0, 255, 255),
         0 0 30px rgba(0, 255, 255, 0.699);
     --box-shadow-button:
         0 2px 3px 0 cyan inset,
-        0 2px 7px 0 cyan,
-        0 2px 10px 0 cyan inset,
-        0 2px 16px 0 cyan;
+        0 2px 7px 0 cyan;
     --background: linear-gradient(to bottom, #000000, #0b060a, #0f0d15, #0e141d, #071a22, #071a22, #071a22, #071a22, #0e141d, #0f0d15, #0b060a, #000000);
     --border: cyan;
     --subtitle-shadow:
-        0 0 5px rgb(255, 152, 16),
-        0 0 20px rgba(255, 151, 16, 0.712);
+        0 0 5px rgb(255, 152, 16);
 }
 
 body {
@@ -93,10 +89,7 @@ ul {
     list-style: none;
 }
 
-.button:hover {
-    box-shadow: var(--box-shadow-button);
-    text-shadow: var(--text-shadow);
-}
+
 
 /* ANIMATION ON SCROLL */
 .hidden {
@@ -186,7 +179,7 @@ ul {
 .sec-flex {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 60%;
 }
 
 .svg-info {
@@ -333,7 +326,9 @@ form {
 input[type="text"],
 input[type="email"],
 textarea {
+    font-family: 'Dosis', sans-serif;
     padding: 10px;
+    font-size: 16px;
     margin: 10px;
     border: none;
     border-radius: 5px;
@@ -341,23 +336,39 @@ textarea {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-input[type="submit"] {
-    padding: 10px 20px;
+.form-submit {
+    padding: 10px 30px;
     margin: 10px;
     border: none;
     border-radius: 5px;
-    color: var(--primary-color);
-    background: transparent;
+    color: black;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    background-color: rgba(255, 151, 16, 0.87);
 }
 
-input[type="submit"]:hover {
-    background-color: rgba(0, 255, 255, 0.404);
+.form-submit:hover {
+    background-color: rgba(255, 151, 16, 0.521);
+    box-shadow: none;
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
 
 @media only screen and (max-width: 800px) {
     .about-me-info {
@@ -379,7 +390,7 @@ input[type="submit"]:hover {
     display: none;
 }
 
-/* MEDIA QUERIES */
+
 
 @media only screen and (max-width: 550px) {
     h2 {
@@ -418,6 +429,9 @@ input[type="submit"]:hover {
     }
     .nav-links a{
         color: white;
+    }
+    .nav-links a:hover{
+        color: #fff;
     }
     .nav-links.visible{
         display: flex;

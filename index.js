@@ -61,3 +61,23 @@ openLinks.addEventListener('click', () => {
 closeLinks.addEventListener('click', () => {
     navLinks.classList.remove('visible')
 })
+
+// GET THE INFORMATION OF THE FORM
+const form = document.getElementById('contact-information')
+const buttonForm = document.querySelector('.form-submit')
+const scriptURL = 'https://script.google.com/macros/s/1XTaVdkdAnzhAHoLOA-x0K4svtJOB9RUnp2OgudFCNoEE4Lo8muDKOgSO/exec'
+
+const handleSubmit = (event) => {
+    event.preventDefault()
+    buttonForm.disabled = true
+    const formData = new FormData(form)
+    fetch(scriptURL, {method: 'POST', body: formData})
+    .then(response => {
+        alert('Success!', response)
+        buttonForm.disabled = false
+    }).catch(error => {
+        console.log(error.TypeError)
+        buttonForm.disabled = false
+    })
+}
+
