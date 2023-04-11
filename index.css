@@ -406,7 +406,7 @@ textarea {
         border: none;
         font-size: 20px;
     }
-
+    
     .nav-links{
         position: absolute; 
         flex-direction: column;
@@ -414,7 +414,6 @@ textarea {
         height: 100vh;
         top: 0;
         right: 0;
-        transform: translateX(102%);
         align-items: end;
         bottom: 0;
         background-color: rgb(0, 0, 0);
@@ -422,11 +421,7 @@ textarea {
         display: none;
         animation: mobileNav 1s 1 forwards;
     }
-    @keyframes mobileNav {
-        to{
-            transform: translateX(0);
-        }
-    }
+
     .nav-links a{
         color: white;
     }
