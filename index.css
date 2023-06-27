@@ -24,11 +24,11 @@ html {
     --color-cyan: cyan;
     --text-shadow: 0 0 5px cyan;
     --text-shadow-title:
-        0 0 10px rgb(0, 255, 255),
-        0 0 30px rgba(0, 255, 255, 0.699);
+        0 0 3px rgb(0, 255, 255),
+        0 0 7px rgba(0, 255, 255, 0.699);
     --box-shadow-button:
-        0 2px 3px 0 cyan inset,
-        0 2px 7px 0 cyan;
+        0 1px 2px 0 cyan inset,
+        0 1px 4px 0 cyan;
     --background: linear-gradient(to bottom, #000000, #0b060a, #0f0d15, #0e141d, #071a22, #071a22, #071a22, #071a22, #0e141d, #0f0d15, #0b060a, #000000);
     --border: cyan;
     --subtitle-shadow:
